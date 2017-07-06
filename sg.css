@@ -223,6 +223,7 @@ header h1 {
 	margin-left: 1.5em;
 	font-family: 'Arial', sans-serif;
 	font-weight: bold;
+	color: white;
 }
 
 .pic {
@@ -270,7 +271,8 @@ header h1 {
 }
 	
 .icone i {
-	background-color: orange; 
+	background-color: rgb(237,28,36);
+	color: white;
 	padding: 0.4em; 
 	border-radius: 50%; 
 	box-shadow: 0 0 10px black;
