@@ -1,0 +1,311 @@
+html, body {
+	margin: 0;
+	padding: 0; 
+}
+
+header {
+	background-color: red;
+	height: 9em;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #222222;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+
+
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+header h1 {
+	margin-top: 1.1em;
+}
+
+.logotxt {
+	display: flex;
+}
+
+.logotxt p {
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+	padding-left: 0.5em;
+	text-align: left;
+}
+
+.btop {
+	display: flex;
+	justify-content: center;
+	border: 1px solid black;
+	margin-top: 2em;
+	z-index: 101;
+	margin-top: 11em;
+}
+
+.btop p {
+	display: flex;
+	justify-content: center;
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+	width: 10em;
+	border-radius: 2%;
+	margin-top: 0.7em;
+	font-size: 1.1em;
+	padding-left: 0.7em;
+}
+
+.new {
+	
+}
+
+.cards {
+	margin-top: 2em;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.date {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.date p {
+	font-size: 2em;
+	margin-top: 0.3em;
+}
+
+.pic {
+	border-left: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pic img {
+	width: auto;
+	max-width: 100%;
+	height: 100%;
+	overflow: auto
+}
+
+.comment {
+	height : 3em;
+}
+
+.icone {
+	height: 100%;
+	margin-top: 1em;
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+	
+.icone i {
+	background-color: orange; 
+	padding: 0.4em; 
+	border-radius: 50%; 
+	box-shadow: 0 0 10px black;
+    font-size: 3em;
+}
+
+.icone p {
+	font-size: 2em;
+}
+
+footer {
+	width: 100%;
+	height: 5em;
+	background-color: red;
+	position: fixed;
+	bottom: 0;
+}
+
+/* .first {
+	display: flex;
+	justify-content: center;
+	height: 15em;
+}
+
+.container {
+	border : 1px solid black;
+	display: flex;
+	margin-top: 1em;
+	border-radius: 10px;
+	width: 70em;
+	overflow: hidden;
+}
+
+.iconpart {
+	padding: 1em; 
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 50em;
+}
+
+.iconpart i {
+	background-color: orange; 
+	padding: 0.4em; 
+	border-radius: 50%; 
+	box-shadow: 0 0 5px black;
+    font-size: 1.5em;
+}
+
+.costpart {
+	width: 250em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.costpart p {
+	font-size: 3em; 
+	margin-bottom: 0;
+}
+
+.picpart{
+	width: 200em;
+}
+
+.picpart img {
+	width:100%; 
+	height: 100%;
+}
