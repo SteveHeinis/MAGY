@@ -226,6 +226,7 @@ header h1 {
 	border-left: 1px solid black;
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .pic img {
@@ -236,7 +237,24 @@ header h1 {
 }
 
 .comment {
-	height : 35em;
+	height : 3.1em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment i {
+	font-size: 3em;
+	padding-left: 0.1em;
+	padding-bottom: 0.1em;
+}
+
+.comment p {
+    padding: 0.3em;
+}
+
+.like i {
+	height: 100%;
+	font-size: 3em;
 }
 
 .icone {
