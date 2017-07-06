@@ -220,6 +220,7 @@ header h1 {
 .date p {
 	font-size: 2em;
 	margin-top: 0.3em;
+	margin-left: 1.5em;
 	font-family: 'Arial', sans-serif;
 	font-weight: bold;
 }
